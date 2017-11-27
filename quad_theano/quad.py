@@ -5,7 +5,7 @@ import theano
 
 n_grid = 50
 
-abisca, wg = np.polynomial.legendre.leggauss(n_grid)
+tg, wg = np.polynomial.legendre.leggauss(n_grid)
 ww = np.outer(wg,wg)
 www = np.zeros((len(wg),len(wg),len(wg)))
 for i, wi in enumerate(wg):
