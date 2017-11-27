@@ -74,6 +74,6 @@ def triple_quad(f, xmin, xmax, ymin, ymax, zmin, zmax, *parameters):
     
     eval_matrix = f(x_plus + dx, y_plus + dy, z_plus + dz, *parameters ) + f(x_plus - dx, y_plus - dy,  z_plus - dz  *parameters)
     
-    val = tt.mulwww,eval_matrix)
+    val = tt.mul(www,eval_matrix)
     
     return .5 * z_diff * y_diff * x_diff * val.sum()
