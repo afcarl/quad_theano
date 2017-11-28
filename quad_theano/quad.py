@@ -22,7 +22,7 @@ www = theano.shared(www)
 
 
 
-def quad(f, x_min, x_max, * parameters):
+def quad(f, x_min, x_max, parameters=[]):
 
     x_diff = 0.5 * (xmax-xmin)
     x_plus = 0.5 * (xmax+xmin)
@@ -38,7 +38,7 @@ def quad(f, x_min, x_max, * parameters):
     return .5 * x_diff * val
 
 
-def double_quad(f, xmin, xmax, ymin, ymax, *parameters):
+def double_quad(f, xmin, xmax, ymin, ymax, parameters=[]):
     
     
     x_diff = 0.5 * (xmax-xmin)
@@ -56,7 +56,7 @@ def double_quad(f, xmin, xmax, ymin, ymax, *parameters):
     
     return .5 * y_diff * x_diff * val.sum()
 
-def triple_quad(f, xmin, xmax, ymin, ymax, zmin, zmax, *parameters):
+def triple_quad(f, xmin, xmax, ymin, ymax, zmin, zmax, parameters = []):
     
     
     x_diff = 0.5 * (xmax-xmin)
